@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login Page</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+             
+
+    </head>
+
+<body>
+    <section>
+        <!--Bắt Đầu Phần Nội Dung-->
+        <div class="noi-dung">
+            <div class="form">
+                <h2>Login Page</h2>
+                <form action="">
+                    <div class="input-form" >
+                        <span>User name</span>
+                        <input id="username" type="text" name="">
+                    </div>
+
+                    <div class="input-form" >
+                        <span>Password</span>
+                        <input id="password" type="password" name="">
+                    </div>
+
+                    <div class="nho-dang-nhap">
+                        <label><input type="checkbox" name=""> Remember me</label>
+                    </div>
+
+                    <div class="input-form " >
+                        <input onclick="myFunction()" type="submit" id="mySubmit" value="Sign in">
+                    </div>
+                    
+                    <div class="input-form ">
+                        <p>Or <a href="#">Click here</a> to create your account.</p>
+                    </div>
+                </form>
+                <h3>Or sign in using:</h3>
+                <ul id="icon-dang-nhap">
+                    <li><i class="fa fa-facebook" aria-hidden="true" >
+                        <span>Facebook</span>
+                    </i></li>
+                    <li><i class="fa fa-google" aria-hidden="true">
+                        <span>Google</span>
+                    </i></li>
+                    <li><i class="fa fa-twitter" aria-hidden="true">
+                        <span>Twitter</span>
+                    </i></li>
+                </ul>
+            </div>
+        </div>
+        <!--Kết Thúc Phần Nội Dung-->
+        <div class="test-prompt">
+            <input type="button" onclick="test_prompt()" value="test prompt">
+        </div>
+    </section>
+
+
+
+    <script>
+        function test_prompt(){
+            prompt("Please enter your name", "Harry Potter")
+        }
+        function myFunction() {
+            var username_ = document.getElementById("username").value;
+            var password_ = document.getElementById("password").value;
+            if (username_ == "abc@gmail.com" && password_ == "123456b"){
+                alert("Success Login !")
+            }
+            else {
+                confirm("Username or password not correct !")
+            }
+          
+
+        }
+    </script>
+</body>
+</html>
